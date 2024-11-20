@@ -1,53 +1,37 @@
-public class BangunDatar {
-    // Attributes
-    private double panjang;
-    private double lebar;
+class Bangun_Datar {
+    //buat atribut
+    double panjang;
+    double lebar;
 
-    // Constructor
-    public BangunDatar(double panjang, double lebar) {
-        this.panjang = panjang;
-        this.lebar = lebar;
+    //buat konstruktornya
+    Bangun_Datar(double Panjang, double Lebar) {
+        this.panjang = Panjang;
+        this.lebar = Lebar;
     }
 
-    // Getter and Setter methods
-    public double getPanjang() {
-        return panjang;
+    //buat method
+    void hitungluas() { // hitung luas
+        double luas =  panjang * lebar;
+        System.out.println("Luas = " + luas);
+       
     }
 
-    public void setPanjang(double panjang) {
-        this.panjang = panjang;
+    void hitungkeliling() { //hitung keliling
+        double keliling =  2 * (this.panjang + this.lebar);
+        System.out.println("Keliling = " + keliling);
     }
 
-    public double getLebar() {
-        return lebar;
+    void hasil() { // cetak hasil
+        hitungkeliling();
+        hitungluas();
     }
+}
 
-    public void setLebar(double lebar) {
-        this.lebar = lebar;
-    }
-
-    // Methods
-    public void hitungLuas() {
-        double luas = panjang * lebar;
-        System.out.println("Luas: " + luas);
-    }
-
-    public void hitungKeliling() {
-        double keliling = 2 * (panjang + lebar);
-        System.out.println("Keliling: " + keliling);
-    }
-
-    public double cetakHasil() {
-        // You can define what result to return here
-        // For now, we'll return the area as an example
-        return panjang * lebar;
-    }
-
+public class App {
     public static void main(String[] args) {
-        // Example usage
-        BangunDatar persegiPanjang = new BangunDatar(5, 3);
-        persegiPanjang.hitungLuas();
-        persegiPanjang.hitungKeliling();
-        System.out.println("Hasil: " + persegiPanjang.cetakHasil());
+        System.out.println("Hello, World!");
+        //objek
+        Bangun_Datar bangun = new Bangun_Datar(3, 6);
+        bangun.hasil(); // print hasil
     }
 }
